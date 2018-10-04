@@ -24,6 +24,7 @@ public class PlayerCollider : MonoBehaviour {
     private IEnumerator Yourscore()
     {
         yield return new WaitForSeconds(2.0f);
+        Time.timeScale = 0f;
         score.text = (player.position.z / 3).ToString("0");
         dieMenuUi.SetActive(true);
 
